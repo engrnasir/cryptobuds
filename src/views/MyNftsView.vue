@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="cards">
-                <NftCard v-for="i in 6" :key="i"/>
+              <NftCard v-for="(card,index) in cards" :key="index" :info="card" />
             </div>
         </div>
       </div>
@@ -37,7 +37,13 @@ import NftCard from "@/components/NftCard.vue";
           totalVal:1400,
   
           val1:1,
-          val2:0.1
+          val2:0.1,
+          cards:[
+            {img:'nft1.png', number:54, ranked:4500},
+            {img:'nft2.png', number:54, ranked:4500},
+            {img:'nft3.png', number:54, ranked:4500},
+            {img:'nft4.png', number:54, ranked:4500},
+          ]
         }
       }
   }
