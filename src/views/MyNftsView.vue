@@ -124,7 +124,6 @@ import NftCard from "@/components/NftCard.vue";
         justify-content: space-between;
         padding: 18px 45px;
         background: #0F0F0F;
-        margin-bottom: 40px;
         @media only screen and (max-width:1120px){
           position: sticky;
           top: 0;
@@ -195,6 +194,7 @@ import NftCard from "@/components/NftCard.vue";
         flex-wrap: wrap;
         max-height: 90vh;
         overflow-y: scroll;
+        padding-top: 40px;
         @media only screen and (max-width:1460px){
           justify-content: space-evenly;
         }
