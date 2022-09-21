@@ -1,18 +1,271 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="row wrapper">
+      <div class="left">
+        <Navbar/>
+        <div class="content">
+          <h2 class="mint">
+            mint <span>and</span> sell
+          </h2>
+          <h2 class="crypto">crypto</h2>
+          <p class="buds">buds</p>
+          <div class="mintNow">
+            <h3 class="text">mint now</h3>
+            <img src="@/assets/arrow.png" alt="" class="arrow">
+          </div>
+        </div>
+      </div>
+      <div class="right">
+          <div class="blur-box">
+            <div v-for="i in 9" :key="i" class="box" :class="`box${i}`"></div>
+          </div>
+          <ProgressComp :firstVal="firstVal" :totalVal="totalVal"/>
+          <div class="values-wrapper">
+            <div class="h-line"></div>
+            <div class="values">
+              <h3>{{firstVal}}  of  {{totalVal}}</h3>
+              <p>minted</p>
+            </div>
+            <div class="h-line"></div>
+          </div>
+          <div class="range-wrapper">
+            <button class="btn dercrementBtn" @click="value--"><p>-</p></button>
+            <p class="value">{{value}}</p>
+            <span>Max</span>
+            <button class="btn incrementBtn" @click="value++"><p>+</p></button>
+          </div>
+          <div class="currencies">
+            <p class="firstCurrency">{{val1}} nft</p>
+            <p class="secondCurrency">{{val2}} eth</p>
+          </div>
+
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import ProgressComp from "../components/ProgressComp.vue";
+import Navbar from "../components/Navbar.vue";
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+    components: { ProgressComp, Navbar },
+    data(){
+      return{
+        value:1,
+        firstVal:400,
+        totalVal:1400,
+
+        val1:1,
+        val2:0.1
+      }
+    }
 }
 </script>
+
+<style lang="scss" scoped>
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 34px;
+    justify-content: space-between;
+    justify-items: center;
+    @media only screen and (max-width:980px){
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+  .left{
+    width: 100%;
+    .content{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .mint{
+        font-weight: 500;
+        font-size: 64px;
+        color: #000000;
+        padding: 140px 0;
+        text-transform: uppercase;
+        @media only screen and (max-width:1460px){
+          font-size: 50px;
+          padding: 80px 0;
+        }
+        span{
+          font-weight: 200;
+        }
+      }
+      .buds,
+      .crypto{
+        font-weight: 500;
+        font-size: 107px;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        @media only screen and (max-width:1460px){
+          font-size: 87px;
+        }
+      }
+      .buds{
+        font-weight: 200;
+        letter-spacing: 0.675em;
+        margin-left: 0.5em;
+      }
+      .mintNow{
+        font-weight: 500;
+        font-size: 64px;
+        letter-spacing: 0.345em;
+        color: #000000;
+        text-shadow: 0px 0px 9px #F3AD26;
+        padding: 60px 0;
+        padding-bottom: 0;
+        text-transform: uppercase;
+        @media only screen and (max-width:1460px){
+          font-size: 44px;
+        }
+      }
+      .arrow{
+        width: 600px;
+        padding-bottom: 189px;
+        @media only screen and (max-width:1460px){
+          width: 410px;
+        }
+      }        
+    }
+  }
+  .right{
+    @media only screen and (max-width:980px){
+      padding: 80px 40px;
+    }
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    background: #0F0F0F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .blur-box{
+        position: absolute;
+        top: 0px;
+        left: 0px; 
+        width: min-content;
+        display: grid;
+        grid-gap: 0;
+        background: transparent;
+        grid-template-columns: repeat(3, 1fr);
+        .box{
+          width: 14px;
+          height: 14px;
+          border: none;
+          outline: none;
+          @media only screen and (max-width:1460px){
+            width: 10px;
+            height: 10px;
+          }
+        }
+        .box3,.box5,.box7{
+          background: #5B5947;
+        }
+        .box1,.box2,.box4{
+          border:1px solid #D9D9D9;
+          background: #D9D9D9;
+        }
+    }
+    .values-wrapper{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .h-line{
+        width: 100%;
+        height: 5px;
+        background: #F3AD26;
+      }
+      .values{
+        padding: 100px 40px;
+        @media only screen and (max-width:1460px){
+          padding: 60px 30px;
+        }
+        h3{
+          font-weight: 400;
+          font-size: 28px;
+          line-height: 34px;
+          color: #FFFFFF;
+          width: max-content;
+        }
+        p{
+          font-weight: 400;
+          font-size: 19px;
+          color: #F3AD26;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .range-wrapper{
+      width: 447px;
+      height: 93px;
+      background: #5B5947;
+      border-radius: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media only screen and (max-width:1460px){
+        width: 347px;
+        height: 63px;
+      }
+      .btn{
+        width: 93px;
+        height: 93px;
+        background: #F3AD26;
+        border-radius: 56px;
+        border: none;
+        font-weight: 400;
+        font-size: 91px;
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+        color: #5B5947;
+        cursor: pointer;
+        @media only screen and (max-width:1460px){
+          width: 63px;
+          height: 63px;
+          font-size: 50px;
+        }
+      }
+      .value, span{
+        margin-right: -60px;
+      }
+      font-weight: 400;
+      font-size: 40px;
+      color: #FFFFFF;
+    }
+    span{
+      font-weight: 400;
+      font-size: 23px;
+      color: #F3AD26;
+      text-transform: uppercase;
+    }
+    .currencies{
+      color: #fff;
+      margin-top: 45px;
+      font-weight: 400;
+      font-size: 40px;
+      display: flex;
+      text-transform: uppercase;
+      @media only screen and (max-width:1460px){
+        margin-top: 30px;
+      }
+      .secondCurrency,
+      .firstCurrency{
+        width: 235px;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .firstCurrency{
+        border-right: 1px solid #F3AD26;
+      }
+    }
+
+  }
+</style>
