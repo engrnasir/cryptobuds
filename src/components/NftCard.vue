@@ -36,6 +36,10 @@ export default {
         background: #0F0F0F;
         margin-right: 20px;
         margin-bottom: 20px;
+        transition: all .25s;
+        &:hover{
+          transform: scale(1.03);
+        }
         .thumbnail{
             position: relative;
             display: flex;

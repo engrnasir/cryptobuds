@@ -48,7 +48,7 @@ export default {
       .logo a{
         text-decoration: none;
         font-weight: 400;
-        font-size: 34px;
+        font-size: 30px;
         text-transform: uppercase;
         color: #fff;
         @media only screen and (max-width:1560px){
@@ -77,7 +77,7 @@ export default {
             text-decoration: none;
             color: #fff;
             font-weight: 400;
-            font-size: 34px;
+            font-size: 30px;
             padding: 10px 30px;
             @media only screen and (max-width:1790px){
               font-size: 24px;
@@ -99,8 +99,8 @@ export default {
         }
       }
       .connectedBtn{
-        width: 87px;
-        height: 87px;
+        width: 60px;
+        height: 60px;
         background: #F3AD26;
         border-radius: 98px;
         display: flex;
@@ -119,12 +119,8 @@ export default {
           height: 35px;
         }
         img{
-          width: 65px;
-          height: 65px;
-          @media only screen and (max-width:1790px){
-            width: 50px;
-            height: 50px;
-          }
+          width: 50px;
+          height: 50px;
           @media only screen and (max-width:1560px){
             width: 25px;
             height: 25px;
@@ -132,8 +128,8 @@ export default {
         }
       }
       .connectWallet{
-        width: 333px;
-        height: 87px;
+        width: 320px;
+        height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;

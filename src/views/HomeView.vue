@@ -83,26 +83,26 @@ export default {
       flex-direction: column;
       .mint{
         font-weight: 500;
-        font-size: 64px;
+        font-size: 48px;
         color: #000000;
-        padding: 140px 0;
+        padding: 80px 0;
         text-transform: uppercase;
-        @media only screen and (max-width:1460px){
-          font-size: 50px;
-          padding: 80px 0;
-        }
         span{
           font-weight: 200;
+        }
+        @media only screen and (max-width:980px){
+          font-size: 32px;
+          padding: 40px 0;
         }
       }
       .buds,
       .crypto{
         font-weight: 500;
-        font-size: 107px;
+        font-size: 80px;
         text-transform: uppercase;
         letter-spacing: 0.15em;
-        @media only screen and (max-width:1460px){
-          font-size: 87px;
+        @media only screen and (max-width:980px){
+          font-size: 50px;
         }
       }
       .buds{
@@ -112,7 +112,7 @@ export default {
       }
       .mintNow{
         font-weight: 500;
-        font-size: 64px;
+        font-size: 48px;
         letter-spacing: 0.345em;
         color: #000000;
         text-shadow: 0px 0px 9px #F3AD26;
@@ -122,12 +122,22 @@ export default {
         @media only screen and (max-width:1460px){
           font-size: 44px;
         }
+        @media only screen and (max-width:980px){
+          font-size: 32px;
+        }
       }
       .arrow{
-        width: 600px;
+        width: 450px;
         padding-bottom: 189px;
         @media only screen and (max-width:1460px){
           width: 410px;
+        }
+        @media only screen and (max-width:1120px){
+          padding-bottom: 120px;
+        }
+        @media only screen and (max-width:980px){
+          width: 300px;
+          padding-bottom: 80px;
         }
       }        
     }

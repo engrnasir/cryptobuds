@@ -1,6 +1,6 @@
 <template>
   <div class="progress">
-  <svg width="450" height="450" viewBox="0 0 200 200">  
+  <svg width="350" height="350" viewBox="0 0 200 200">  
     <circle cx="100" cy="100" r="74" fill="none" stroke="#666" stroke-width="12" class="outer-circle" />
     <circle cx="100" cy="100" r="74" fill="none" stroke="#FC4D04" stroke-width="12" stroke-dasharray="465" :stroke-dashoffset="dashOffsetCircle" stroke-linecap="round" class="inner-circle"/>
   </svg>
@@ -47,6 +47,10 @@ $grey:desaturate($colour,90%);
     @media only screen and (max-width : 1460px){
       width: 350px;
       height: 350px;
+    }
+    @media only screen and (max-width : 1160px){
+      width: 300px;
+      height: 300px;
     }
     .outer-circle{
       stroke: #5B5947;        

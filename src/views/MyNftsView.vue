@@ -11,7 +11,15 @@
         <div class="right">
             <div class="filterBar">
                 <input type="text" placeholder="SEARCH FOR #ID">
-                <div class="sorting">no sorting</div>
+                <div class="sortingWrapper" :class="showSortingOptions? '':'hideOptions'">
+                  <div class="sorting" @click="showSortingOptions=!showSortingOptions">no sorting</div>
+                  <ul class="options">
+                    <li class="option">option1</li>
+                    <li class="option">option2</li>
+                    <li class="option">option3</li>
+                    <li class="option">option4</li>
+                  </ul>
+                </div>
                 <div class="blur-box">
                     <div v-for="i in 4" :key="i" class="box" :class="`box${i}`"></div>
                 </div>
@@ -32,6 +40,7 @@ import NftCard from "@/components/NftCard.vue";
       components: { ProgressComp, Navbar, NftCard },
       data(){
         return{
+          showSortingOptions:false,
           value:1,
           firstVal:400,
           totalVal:1400,
@@ -52,6 +61,9 @@ import NftCard from "@/components/NftCard.vue";
   <style lang="scss" scoped>
     .my-nft{
         max-height: 100vh;
+        @media only screen and (min-width:1120px){
+          overflow: hidden;
+        }
     }
     .wrapper{
         position: relative;
@@ -81,27 +93,21 @@ import NftCard from "@/components/NftCard.vue";
         .gallery,
         .the{
             font-weight: 500;
-            font-size: 81px;
+            font-size: 60px;
             letter-spacing: 0.14em;
             color: #000000;
             text-transform: uppercase;
-            @media only screen and (max-width:1660px){
-              font-size: 61px;
-            }
             @media only screen and (max-width:1460px){
-              font-size: 41px;
+              font-size: 36px;
             }
         }
         .gallery{
             font-weight: 200;
-            font-size: 107px;
+            font-size: 80px;
             letter-spacing: 0.34em;
             color: #000000;
-            @media only screen and (max-width:1660px){
-              font-size: 87px;
-            }
             @media only screen and (max-width:1460px){
-              font-size: 67px;
+              font-size: 60px;
               letter-spacing: 0.24em;
             }
         }      
@@ -120,14 +126,15 @@ import NftCard from "@/components/NftCard.vue";
         width: 100%;
         height: 90px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         padding: 18px 45px;
         background: #0F0F0F;
-        @media only screen and (max-width:1120px){
-          position: sticky;
-          top: 0;
-          z-index: 99;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        @media only screen and (max-width:520px){
+          padding: 15px 30px;
         }
         input[type='text']{
             width: 485px;
@@ -141,23 +148,58 @@ import NftCard from "@/components/NftCard.vue";
             @media only screen and (max-width:1720px){
               width: 50%;
             }
-        }
-        .sorting{
-            width: 240px;
-            height: 49px;
-            border: 2px solid #F3AD26;
-            border-radius: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 400;
-            font-size: 15px;
-            color: #F3AD26;
-            text-transform: uppercase;
-            @media only screen and (max-width: 1360px){
-              width: 180px;
-              height: 39px;
+            @media only screen and (max-width:520px){
+              border: 3px solid #5B5947;
             }
+        }
+        .sortingWrapper{
+          width: 240px;
+          border-radius: 27px;
+          background-color: #0F0F0F;
+          border: 1px solid #F3AD26;
+          color: #fff;
+          overflow: hidden;  
+          margin-top: 5px;        
+          @media only screen and (max-width: 1360px){
+            width: 180px;
+          }
+          .options{
+            list-style: none;
+            text-align: center;
+            padding: 10px 0;
+            .option{
+              padding: 5px;
+              &:hover{
+                background: rgb(53, 53, 53);
+              }
+            }
+          }
+
+          .sorting{
+              width: 240px;
+              height: 49px;
+              border: 2px solid #F3AD26;
+              border-radius: 45px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: 400;
+              font-size: 15px;
+              color: #F3AD26;
+              text-transform: uppercase;
+              @media only screen and (max-width: 1360px){
+                width: 180px;
+                height: 39px;
+              }
+          }
+
+        }
+        .hideOptions{
+          height: 49px;
+          border: none;
+          @media only screen and (max-width: 1360px){
+            height: 39px;
+          }
         }
         .blur-box{
           position: absolute;
@@ -195,7 +237,7 @@ import NftCard from "@/components/NftCard.vue";
         max-height: 90vh;
         overflow-y: scroll;
         padding-top: 40px;
-        @media only screen and (max-width:1460px){
+        @media only screen and (max-width:1620px){
           justify-content: space-evenly;
         }
         &::-webkit-scrollbar {
