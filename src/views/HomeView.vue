@@ -20,7 +20,7 @@
             <img src="@/assets/rightPixel.png" alt="">
             <div v-for="i in 9" :key="i" class="box" :class="`box${i}`"></div>
           </div>
-          <ProgressComp :firstVal="firstVal" :totalVal="totalVal"/>
+           <ProgressComp :firstVal="firstVal" :totalVal="totalVal"/>  
           <div class="values-wrapper">
             <div class="h-line"></div>
             <div class="values">
@@ -147,6 +147,9 @@ export default {
     @media only screen and (max-width:980px){
       padding: 80px 40px;
     }
+    @media only screen and (max-width:560px){
+      padding: 50px 20px;
+    }
     position: relative;
     width: 100%;
     margin-top: 25px;
@@ -180,11 +183,17 @@ export default {
         width: 100%;
         height: 5px;
         background: #F3AD26;
+        @media only screen and (max-width:560px){
+            height: 2.5px;
+          }
       }
       .values{
         padding: 100px 40px;
         @media only screen and (max-width:1460px){
           padding: 60px 30px;
+        }
+        @media only screen and (max-width:560px){
+          padding: 30px 20px;
         }
         h3{
           font-weight: 400;
@@ -192,6 +201,9 @@ export default {
           line-height: 34px;
           color: #FFFFFF;
           width: max-content;
+          @media only screen and (max-width:560px){
+            font-size: 20px;
+          }
         }
         p{
           font-weight: 400;
@@ -199,6 +211,9 @@ export default {
           color: #F3AD26;
           text-align: center;
           text-transform: uppercase;
+          @media only screen and (max-width:560px){
+            font-size: 15px;
+          }
         }
       }
     }
@@ -210,9 +225,17 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      font-weight: 400;
+      font-size: 40px;
+      color: #FFFFFF;
       @media only screen and (max-width:1460px){
         width: 347px;
         height: 63px;
+      }
+      @media only screen and (max-width:560px){
+        width: 230px;
+        height: 30px;
+        font-size: 20px;
       }
       .btn{
         width: 93px;
@@ -232,13 +255,18 @@ export default {
           height: 63px;
           font-size: 50px;
         }
+        @media only screen and (max-width:560px){
+          width: 30px;
+          height: 30px;
+          font-size: 30px;
+        }
       }
       .value, span{
-        margin-right: -60px;
+        margin-right: -60px;  
+        @media only screen and (max-width:560px){
+          font-size: 20px;
+        }
       }
-      font-weight: 400;
-      font-size: 40px;
-      color: #FFFFFF;
     }
     span{
       font-weight: 400;
@@ -256,11 +284,17 @@ export default {
       @media only screen and (max-width:1460px){
         margin-top: 30px;
       }
+      @media only screen and (max-width:580px){
+        font-size: 32px;
+      }
       .secondCurrency,
       .firstCurrency{
         width: 235px;
         text-align: center;
         padding: 10px 0;
+        @media only screen and (max-width:580px){
+          width:140px;
+        }
       }
       .firstCurrency{
         border-right: 1px solid #F3AD26;

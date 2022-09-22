@@ -43,27 +43,36 @@ export default {
       } 
       @media only screen and (max-width:1560px){
         padding-left: 30px;
+        
+      } 
+      @media only screen and (max-width:1560px){
+        padding: 30px;
       } 
 
-      .logo a{
-        text-decoration: none;
-        font-weight: 400;
-        font-size: 30px;
-        text-transform: uppercase;
-        color: #fff;
-        @media only screen and (max-width:1560px){
-          font-size: 28px;
+      .logo{
+        display: flex;
+        align-items: center;
+        a{
+          text-decoration: none;
+          font-weight: 400;
+          font-size: 30px;
+          text-transform: uppercase;
+          color: #fff;
+          @media only screen and (max-width:1560px){
+            font-size: 28px;
+          }
+          @media only screen and (max-width:1180px){
+            font-size: 24px;
+          } 
+          @media only screen and (max-width:580px){
+            font-size: 16px;
+          } 
+          
+          span{
+            color: #F3AD26;
+          }
         }
-        @media only screen and (max-width:1180px){
-          font-size: 24px;
-        } 
-        @media only screen and (max-width:520px){
-          font-size: 20px;
-        } 
-        span{
-          color: #F3AD26;
-        }
-      }
+      } 
       .navOptions{
         list-style: none;
         display: flex;
@@ -88,9 +97,9 @@ export default {
             @media only screen and (max-width:1180px){
               font-size: 20px;
             } 
-            @media only screen and (max-width:520px){
-              font-size: 14px;
-              padding: 5px 10px;
+            @media only screen and (max-width:580px){
+              font-size: 12px;
+              padding: 3px 10px;
             } 
             &:hover{
                 color: #F3AD26; 
@@ -120,6 +129,10 @@ export default {
           width: 35px;
           height: 35px;
         }
+        @media only screen and (max-width:560px){
+          width: 25px;
+          height: 25px;
+        }
         img{
           width: 50px;
           height: 50px;
@@ -127,9 +140,15 @@ export default {
             width: 25px;
             height: 25px;
           }
+          @media only screen and (max-width:560px){
+            width: 15px;
+            height: 15px;
+          }
         }
       }
       .connectWallet{
+        position: relative;
+        z-index: 1;
         width: 233px;
         height: 67px;
         font-size: 20px;

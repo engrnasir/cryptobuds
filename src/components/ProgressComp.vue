@@ -52,6 +52,10 @@ $grey:desaturate($colour,90%);
       width: 300px;
       height: 300px;
     }
+    @media only screen and (max-width : 460px){
+      width: 160px;
+      height: 160px;
+    }
     .outer-circle{
       stroke: #5B5947;        
       outline: 12px solid #1A1919;
@@ -83,6 +87,11 @@ $grey:desaturate($colour,90%);
       top: 33%;
       font-size: 69px;
     }
+    @media only screen and (max-width : 460px){
+      top: 16%;
+      font-size: 30px;
+    }
+
   }
 }
 
