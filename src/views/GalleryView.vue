@@ -135,8 +135,7 @@ import NftCard from "@/components/NftCard.vue";
         align-items: flex-start;
         justify-content: space-between;
         padding: 18px 45px;
-        background: rgba(15, 15, 15, 0.95);
-        backdrop-filter: blur(20px);
+        background-color: #0F0F0F;
         @media only screen and (max-width:1120px){
           position: sticky;
           top: 0px;
