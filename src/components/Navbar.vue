@@ -13,7 +13,7 @@
           <button class="connectWallet" v-else @click="isConnected = !isConnected">connect wallet</button>
 
           <div class="blur-box">
-            <div v-for="i in 16" :key="i" class="box" :class="`box${i}`"></div>
+            <img src="@/assets/pixel.png" alt="">
           </div>
         </div>
 </template>
@@ -99,6 +99,8 @@ export default {
         }
       }
       .connectedBtn{
+        position: relative;
+        z-index: 2;
         width: 60px;
         height: 60px;
         background: #F3AD26;
@@ -128,59 +130,39 @@ export default {
         }
       }
       .connectWallet{
-        width: 320px;
-        height: 60px;
+        width: 233px;
+        height: 67px;
+        font-size: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 400;
-        font-size: 24px;
         color: #F3AD26;        
         background: #5B5947;
         border-radius: 98px;
         border:none;
         text-transform: uppercase;
         cursor: pointer;
-        @media only screen and (max-width:1790px){
-          width: 233px;
-          height: 67px;
-          font-size: 20px;
+        @media only screen and (max-width:1460px){
+          width: 180px;
+          height: 40px;
+          font-size: 15px;
         }
       }
       .blur-box{
         position: absolute;
         bottom: -1px;
-        right: -2px; 
+        right: -1px; 
         width: min-content;
         width: 56px;
-        display: flex;
-        flex-wrap: wrap;
-        background: #D9D9D9;
-        grid-template-columns: repeat(4, 1fr);
+        height: 56px;
         @media only screen and (max-width:1790px){
             width: 40px;
+            height: 40px;
           }
-        .box{
-          width: 14px;
-          height: 14px;
-          border: none;
-          outline: none;
-          @media only screen and (max-width:1790px){
-            width: 10px;
-            height: 10px;
-          }
-        }
-        .box1,.box2,.box5{
-          background-color: #0F0F0F;
-          border: 2px solid #0F0F0F;;
-        }
-        .box3,.box6,.box9{
-          background: #5B5947;
-        }
-        .box4, .box7, .box8,.box10, .box11, .box12, .box13,.box14, .box15,
-        .box16{
-          border:1px solid #D9D9D9;
-          background: #D9D9D9;
+        img{
+          width: 100%;
+          height: 100%;
         }
       }
     }

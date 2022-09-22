@@ -17,6 +17,7 @@
       </div>
       <div class="right">
           <div class="blur-box">
+            <img src="@/assets/rightPixel.png" alt="">
             <div v-for="i in 9" :key="i" class="box" :class="`box${i}`"></div>
           </div>
           <ProgressComp :firstVal="firstVal" :totalVal="totalVal"/>
@@ -156,29 +157,18 @@ export default {
     justify-content: center;
     .blur-box{
         position: absolute;
-        top: 0px;
+        top: -1px;
         left: 0px; 
-        width: min-content;
-        display: grid;
-        grid-gap: 0;
-        background: transparent;
-        grid-template-columns: repeat(3, 1fr);
-        .box{
-          width: 14px;
-          height: 14px;
-          border: none;
-          outline: none;
-          @media only screen and (max-width:1460px){
-            width: 10px;
-            height: 10px;
-          }
+        width: 42px;
+        height: 42px;
+
+        @media only screen and (max-width:1460px){
+          width: 30px;
+          height: 30px;
         }
-        .box3,.box5,.box7{
-          background: #5B5947;
-        }
-        .box1,.box2,.box4{
-          border:1px solid #D9D9D9;
-          background: #D9D9D9;
+        img{
+          width: 100%;
+          height: 100%;
         }
     }
     .values-wrapper{

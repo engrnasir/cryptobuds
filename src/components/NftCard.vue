@@ -14,10 +14,10 @@
         <p class="value">{{info.ranked}}</p>
     </div>
     <div class="blur-box1">
-        <div v-for="i in 4" :key="i" class="b-box" :class="`b-box${i}`"></div>
+        <img src="@/assets/nftPixelup.png" alt="">
     </div>
     <div class="blur-box2">
-        <div v-for="i in 4" :key="i" class="b-box" :class="`b-box${i}`"></div>
+        <img src="@/assets/nftPixeldown.png" alt="">
     </div>
   </div>
 </template>
@@ -34,14 +34,18 @@ export default {
         padding: 28px;
         padding-bottom: 42px;
         background: #0F0F0F;
-        margin-right: 20px;
+        margin: 10px;
         margin-bottom: 20px;
         transition: all .25s;
         &:hover{
           transform: scale(1.03);
+          border-radius: 0 30px 0 30px;
+          cursor: pointer;
+          border: 1px solid #F3AD26;
         }
         .thumbnail{
             position: relative;
+            z-index: 2;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -87,58 +91,26 @@ export default {
             }
         }
         .blur-box1{
-                position: absolute;
-                top: 0px;
-                left: 0px; 
-                width: min-content;
-                display: grid;
-                grid-gap: 0;
-                background: transparent;
-        
-                grid-template-columns: repeat(2, 1fr);
-                .b-box{
-                    width: 14px;
-                    height: 14px;
-                    border: none;
-                    outline: none;
-                }
-                .b-box2,.b-box3{
-                    background: #5B5947;
-                }
-                .b-box4{
-                    background: #0F0F0F;
-                }
-                .b-box1{
-                    border:1px solid #D9D9D9;
-                    background: #D9D9D9;
-                }
+            position: absolute;
+            top: -3px;
+            left: -2px; 
+            width: 28px;
+            height: 28px;
+            img{
+                width: 100%;
+                height: 100%;
+            }   
         }
         .blur-box2{
-                position: absolute;
-                bottom: 0px;
-                right: 0px; 
-                width: min-content;
-                display: grid;
-                grid-gap: 0;
-                background: transparent;
-        
-                grid-template-columns: repeat(2, 1fr);
-                .b-box{
-                    width: 14px;
-                    height: 14px;
-                    border: none;
-                    outline: none;
-                }
-                .b-box2,.b-box3{
-                    background: #5B5947;
-                }
-                .b-box1{
-                    background: #0F0F0F;
-                }
-                .b-box4{
-                    border:1px solid #D9D9D9;
-                    background: #D9D9D9;
-                }
+            position: absolute;
+            bottom: -1px;
+            right: -1px; 
+            width: 28px;
+            height: 28px;
+            img{
+                width: 100%;
+                height: 100%;
+            } 
         }
     }
 

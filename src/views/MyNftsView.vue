@@ -21,7 +21,7 @@
                   </ul>
                 </div>
                 <div class="blur-box">
-                    <div v-for="i in 4" :key="i" class="box" :class="`box${i}`"></div>
+                    <img src="@/assets/filterPixel.png" alt="">
                 </div>
             </div>
             <div class="cards">
@@ -130,13 +130,17 @@ import NftCard from "@/components/NftCard.vue";
         justify-content: space-between;
         padding: 18px 45px;
         background: #0F0F0F;
-        position: sticky;
-        top: 0;
-        z-index: 99;
+        @media only screen and (max-width:1120px){
+          position: sticky;
+          top: 0px;
+          z-index: 99;
+        }
         @media only screen and (max-width:520px){
           padding: 15px 30px;
         }
         input[type='text']{
+          position: relative;
+          z-index: 2;
             width: 485px;
             height: 49px;
             border: 7px solid #5B5947;
@@ -153,6 +157,8 @@ import NftCard from "@/components/NftCard.vue";
             }
         }
         .sortingWrapper{
+          position: relative;
+          z-index: 999;
           width: 240px;
           border-radius: 27px;
           background-color: #0F0F0F;
@@ -203,29 +209,16 @@ import NftCard from "@/components/NftCard.vue";
         }
         .blur-box{
           position: absolute;
-          bottom: 0px;
-          left: 0px; 
-          width: min-content;
-          display: grid;
-          grid-gap: 0;
-          background: transparent;
-  
-          grid-template-columns: repeat(2, 1fr);
-          .box{
-            width: 14px;
-            height: 14px;
-            border: none;
-            outline: none;
+          bottom: -0.5px;
+          left: -2px; 
+          width: 42px;
+          height: 42px;
+          @media only screen and (max-width:1120px){
+            bottom: -0.8px;
           }
-          .box1,.box4{
-            background: #5B5947;
-          }
-          .box2{
-            background: #0F0F0F;
-          }
-          .box3{
-            border:1px solid #D9D9D9;
-            background: #D9D9D9;
+          img{
+            width: 100%;
+            height: 100%;
           }
       }
       }
@@ -237,6 +230,8 @@ import NftCard from "@/components/NftCard.vue";
         max-height: 90vh;
         overflow-y: scroll;
         padding-top: 40px;
+        padding-bottom: 40px;
+        padding-right: 20px;
         @media only screen and (max-width:1620px){
           justify-content: space-evenly;
         }
