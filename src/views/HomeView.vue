@@ -36,12 +36,12 @@
             <div class="h-line"></div>
           </div>
           <div class="range-wrapper">
-            <button class="btn dercrementBtn" @click="value--"><p>-</p></button>
-            <p class="value">{{value}}</p>
+            <button class="btn dercrementBtn" @click="value>0?value--:value"><p>-</p></button>
+            <input type="number" class="valueInput" v-model="value">
             <span>Max</span>
             <button class="btn incrementBtn" @click="value++"><p>+</p></button>
           </div>
-          <button class="mintBtn" @click="showPopup=true">mint</button>
+          <button class="mintBtn" @click="value>0?showPopup=true:''" :class="value==0? 'disableMint':''">mint</button>
           <div class="currencies">
             <p class="firstCurrency">{{val1}} nft</p>
             <p class="secondCurrency">{{val2}} eth</p>
@@ -347,8 +347,25 @@ export default {
           font-size: 30px;
         }
       }
-      .value, span{
-        margin-right: -60px;  
+      .valueInput{
+        background: transparent;
+        border: none;
+        text-align: right;
+        width: 100px;
+        font-size: 40px;
+        color: #fff;
+        padding: 5px 2px; 
+        outline: none;
+        @media only screen and (max-width:1120px){
+          width: 80px;
+          font-size: 30px;
+        }
+        @media only screen and (max-width:560px){
+          padding:2px; 
+          font-size: 20px;
+        }
+      }
+      span{  
         @media only screen and (max-width:560px){
           font-size: 20px;
         }
@@ -388,6 +405,14 @@ export default {
       }
 
 
+    }
+    .disableMint{
+      background: #4B4230;
+      box-shadow: none;
+      color: #353535;
+      &:hover, &a:active{
+        box-shadow: none;
+      }
     }
     .currencies{
       color: #fff;
