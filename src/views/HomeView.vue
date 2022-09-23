@@ -144,12 +144,6 @@ export default {
     }
   }
   .right{
-    @media only screen and (max-width:980px){
-      padding: 80px 40px;
-    }
-    @media only screen and (max-width:560px){
-      padding: 50px 20px;
-    }
     position: relative;
     width: 100%;
     margin-top: 25px;
@@ -158,6 +152,13 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    @media only screen and (max-width:980px){
+      padding: 80px 40px;
+    }
+    @media only screen and (max-width:560px){
+      padding: 50px 20px;
+    }
     .blur-box{
         position: absolute;
         top: -2px;
