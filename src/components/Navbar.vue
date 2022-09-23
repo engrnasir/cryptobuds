@@ -37,7 +37,6 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      overflow: hidden;
       @media only screen and (max-width:1790px){
         padding: 50px;
       } 
@@ -48,6 +47,9 @@ export default {
       @media only screen and (max-width:1560px){
         padding: 30px;
       } 
+      @media only screen and (max-width:1120px){
+        overflow-x: hidden;
+      }
 
       .logo{
         display: flex;
