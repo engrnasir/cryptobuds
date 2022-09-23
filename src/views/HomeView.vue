@@ -160,8 +160,8 @@ export default {
     justify-content: center;
     .blur-box{
         position: absolute;
-        top: -1px;
-        left: -0.6px; 
+        top: -2px;
+        left: -2.4px; 
         width: 42px;
         height: 42px;
 
