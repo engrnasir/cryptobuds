@@ -1,5 +1,11 @@
 <template>
   <div class="home">
+    <div class="overlay" v-if="showPopup"></div>
+    <div class="popup" v-if="showPopup">
+      <button class="closeBtn" @click="showPopup=false">x</button>
+      <h3>TRANSACTION SENT ...</h3>
+      <p>PLEASE WAIT FOR CONFORMATION</p>
+    </div>
     <div class="row wrapper">
       <div class="left">
         <Navbar/>
@@ -35,6 +41,7 @@
             <span>Max</span>
             <button class="btn incrementBtn" @click="value++"><p>+</p></button>
           </div>
+          <button class="mintBtn" @click="showPopup=true">mint</button>
           <div class="currencies">
             <p class="firstCurrency">{{val1}} nft</p>
             <p class="secondCurrency">{{val2}} eth</p>
@@ -52,6 +59,8 @@ export default {
     components: { ProgressComp, Navbar },
     data(){
       return{
+        showPopup:false,
+
         value:1,
         firstVal:400,
         totalVal:1400,
@@ -64,13 +73,80 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+  }
+  .popup{
+    position: fixed;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 486px;
+    height: 327px;
+    background: rgba(0, 0, 0, 0.66);
+    border: 7px solid #F3AD26;
+    box-shadow: 0px 0px 23px #000000;
+    backdrop-filter: blur(35px);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 580px){
+      width: 95%;
+    }
+
+    .closeBtn{
+      color : #F3AD26;
+      font-size: 40px;
+      background: transparent; 
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-weight: 300;
+      @media only screen and (max-width: 580px){
+        font-size: 30px;
+      }
+    }
+    h3{
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 41px;
+      color: #FFFFFF;
+      @media only screen and (max-width: 580px){
+        font-size: 20px;
+      }
+    }
+    p{
+      width: 60%;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 41px;
+      text-align: center;
+      color: #F3DF26;
+      @media only screen and (max-width: 580px){
+        font-size: 20px;
+      }
+    }
+  }
+
   .wrapper{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 34px;
     justify-content: space-between;
     justify-items: center;
-    @media only screen and (max-width:980px){
+    @media only screen and (max-width:1120px){
       grid-template-columns: repeat(1,1fr);
     }
   }
@@ -152,7 +228,9 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    @media only screen and (max-width:1120px){
+      
+    }
     @media only screen and (max-width:980px){
       padding: 80px 40px;
     }
@@ -221,6 +299,7 @@ export default {
     .range-wrapper{
       width: 447px;
       height: 93px;
+      margin-bottom: 15px;
       background: #5B5947;
       border-radius: 56px;
       display: flex;
@@ -269,11 +348,40 @@ export default {
         }
       }
     }
+
     span{
       font-weight: 400;
       font-size: 23px;
       color: #F3AD26;
       text-transform: uppercase;
+    }
+    .mintBtn{
+      background: #F3AD26;
+      box-shadow: 0px 0px 17px #F3AD26;
+      border-radius: 81px;
+      width: 447px;
+      height: 60px;
+      border: none;
+
+      font-weight: 400;
+      font-size: 36px;
+      color: #1A1919;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .2s;
+      &:hover, &a:active{
+        box-shadow: 0px 0px 5px #F3AD26;
+      }
+      @media only screen and (max-width:1460px){
+        width: 347px;
+        height: 43px;
+        font-size: 20px;
+      }
+      @media only screen and (max-width:560px){
+        width: 230px;
+      }
+
+
     }
     .currencies{
       color: #fff;

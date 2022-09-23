@@ -2,9 +2,9 @@
   <div class="nav">
           <h1 class="logo"><router-link to="/">crypto<span>buds</span></router-link></h1>
 
-          <ul class="navOptions" v-if="isConnected">
+          <ul class="navOptions" >
             <li class="item"><router-link to="/gallery">Gallery</router-link></li>
-            <li class="item"><router-link to="/mynfts">MY NFTs</router-link></li>
+            <li class="item"><router-link to="/mynfts" v-if="isConnected">MY NFTs</router-link></li>
           </ul>
           <button v-if="isConnected" class="connectedBtn" @click="isConnected = !isConnected">
             <img src="@/assets/connectedBtn.png" alt="">
@@ -80,8 +80,8 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        &>:first-child a{
-          border-right: 1px solid #F3AD26;
+        &>:last-child a{
+          border-left: 1px solid #F3AD26;
         }
         .item{
           a{
@@ -169,6 +169,11 @@ export default {
           height: 40px;
           font-size: 15px;
         }
+        @media only screen and (max-width:580px){
+          width: 120px;
+          height: 24px;
+          font-size: 10px;
+        }
       }
       .blur-box{
         position: absolute;
@@ -180,6 +185,10 @@ export default {
         @media only screen and (max-width:1790px){
             width: 40px;
             height: 40px;
+          }
+          @media only screen and (max-width:980px){
+            width: 25px;
+            height: 25px;
           }
         img{
           width: 100%;
