@@ -89,8 +89,8 @@ export default {
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
-    width: 486px;
-    height: 327px;
+    width: 608px;
+    height: 409px;
     background: rgba(0, 0, 0, 0.66);
     border: 7px solid #F3AD26;
     box-shadow: 0px 0px 23px #000000;
@@ -100,6 +100,11 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 1460px){   
+      width: 486px;
+      height: 327px;   
+    }
     @media only screen and (max-width: 580px){
       width: 95%;
     }
@@ -111,7 +116,7 @@ export default {
       border: none;
       cursor: pointer;
       position: absolute;
-      top: 15px;
+      top: 5px;
       right: 15px;
       font-weight: 300;
       @media only screen and (max-width: 580px){
@@ -120,9 +125,12 @@ export default {
     }
     h3{
       font-weight: 400;
-      font-size: 24px;
+      font-size: 34px;
       line-height: 41px;
       color: #FFFFFF;
+      @media only screen and (max-width: 1460px){
+        font-size: 24px;
+      }
       @media only screen and (max-width: 580px){
         font-size: 20px;
       }
@@ -130,10 +138,13 @@ export default {
     p{
       width: 60%;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 34px;
       line-height: 41px;
       text-align: center;
       color: #F3DF26;
+      @media only screen and (max-width: 1460px){
+        font-size: 24px;
+      }
       @media only screen and (max-width: 580px){
         font-size: 20px;
       }
