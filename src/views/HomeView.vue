@@ -239,12 +239,7 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media only screen and (max-width:1120px){
-      
-    }
-    @media only screen and (max-width:980px){
-      padding: 80px 40px;
-    }
+    padding: 80px 40px;
     @media only screen and (max-width:560px){
       padding: 50px 20px;
     }
