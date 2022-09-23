@@ -161,7 +161,7 @@ export default {
     .blur-box{
         position: absolute;
         top: -1px;
-        left: -0.54px; 
+        left: -0.6px; 
         width: 42px;
         height: 42px;
 
