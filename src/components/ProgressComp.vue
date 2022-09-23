@@ -61,6 +61,8 @@ $grey:desaturate($colour,90%);
       outline: 12px solid #1A1919;
       box-shadow: 0px 0px 5px #F3AD26;
       border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
       width: min-content;
       box-shadow: 0 0 10px 10px #fabd44;
     }

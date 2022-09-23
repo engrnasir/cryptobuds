@@ -202,7 +202,7 @@ export default {
           color: #FFFFFF;
           width: max-content;
           @media only screen and (max-width:560px){
-            font-size: 20px;
+            font-size: 18px;
           }
         }
         p{
@@ -285,7 +285,7 @@ export default {
         margin-top: 30px;
       }
       @media only screen and (max-width:580px){
-        font-size: 32px;
+        font-size: 28px;
       }
       .secondCurrency,
       .firstCurrency{
@@ -293,7 +293,7 @@ export default {
         text-align: center;
         padding: 10px 0;
         @media only screen and (max-width:580px){
-          width:140px;
+          width:110px;
         }
       }
       .firstCurrency{
