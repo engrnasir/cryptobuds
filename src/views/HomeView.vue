@@ -222,10 +222,13 @@ export default {
         }
         @media only screen and (max-width:1120px){
           padding-bottom: 120px;
+          transform: rotate(90deg) translateY(-80px);
+          width: 120px;
         }
         @media only screen and (max-width:980px){
-          width: 300px;
-          padding-bottom: 80px;
+          padding-bottom: 100px;
+          transform: rotate(90deg) translateY(-40px) translateX(10px);
+          width: 120px;
         }
       }        
     }
