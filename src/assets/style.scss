@@ -204,6 +204,9 @@
     flex-wrap: wrap;
     max-height: 90vh;
     overflow-y: scroll;
+    @media only screen and (max-width:1120px){
+      overflow-y: none;
+    }
     
     @media only screen and (max-width:1620px){
       justify-content: space-evenly;
