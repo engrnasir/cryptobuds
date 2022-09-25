@@ -44,6 +44,7 @@ $grey:desaturate($colour,90%);
 
   svg{
     transform: rotate(180deg);
+    border-radius: 50% !important;
     @media only screen and (max-width : 1460px){
       width: 350px;
       height: 350px;
