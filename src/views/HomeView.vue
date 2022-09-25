@@ -80,7 +80,7 @@ export default {
     left: 0;
     z-index: 999;
     width: 100%;
-    height: 100vh;
+    height: 130vh;
     background: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(15px);
   }
