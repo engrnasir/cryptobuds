@@ -44,7 +44,6 @@ $grey:desaturate($colour,90%);
 
   svg{
     transform: rotate(180deg);
-    border-radius: 50% !important;
     @media only screen and (max-width : 1460px){
       width: 350px;
       height: 350px;
@@ -58,6 +57,7 @@ $grey:desaturate($colour,90%);
       height: 160px;
     }
     .outer-circle{
+      width: min-content;
       stroke: #5B5947;        
       outline: 12px solid #1A1919;
       box-shadow: 0px 0px 5px #F3AD26;
@@ -65,7 +65,6 @@ $grey:desaturate($colour,90%);
       -moz-border-radius: 50% !important;
       border-radius: 50% !important;
       -khtml-border-radius: 50% !important;
-      width: min-content;
       box-shadow: 0 0 10px 10px #fabd44;
     }
      .inner-circle{
