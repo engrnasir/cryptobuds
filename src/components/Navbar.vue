@@ -48,7 +48,7 @@ export default {
         padding: 30px;
       } 
       @media only screen and (max-width:1120px){
-        overflow: hidden;
+        height: min-content;
       }
 
       .logo{

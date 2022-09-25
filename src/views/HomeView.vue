@@ -18,6 +18,7 @@
           <div class="mintNow">
             <h3 class="text">mint now</h3>
             <img src="@/assets/arrow.png" alt="" class="arrow">
+            <img src="@/assets/arrowdown.png" alt="" class="arrowdown">
           </div>
         </div>
       </div>
@@ -213,6 +214,9 @@ export default {
         @media only screen and (max-width:980px){
           font-size: 32px;
         }
+        @media only screen and (max-width:580px){
+          letter-spacing: 0.22em;
+        }
       }
       .arrow{
         width: 450px;
@@ -221,16 +225,19 @@ export default {
           width: 410px;
         }
         @media only screen and (max-width:1120px){
-          padding-bottom: 120px;
-          transform: rotate(90deg) translateY(-80px);
-          width: 120px;
+         display: none;
         }
-        @media only screen and (max-width:980px){
-          padding-bottom: 100px;
-          transform: rotate(90deg) translateY(-40px) translateX(10px);
-          width: 120px;
+      }   
+      .arrowdown{
+        height: 86px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        @media only screen and (min-width:1120px){
+         display: none;
         }
-      }        
+
+      }     
     }
   }
   .right{
@@ -429,14 +436,15 @@ export default {
       }
       @media only screen and (max-width:580px){
         font-size: 28px;
+        width: 100%;
       }
       .secondCurrency,
       .firstCurrency{
-        width: 235px;
+        width: 230px;
         text-align: center;
         padding: 10px 0;
         @media only screen and (max-width:580px){
-          width:110px;
+          width:50%;
         }
       }
       .firstCurrency{
