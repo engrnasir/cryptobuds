@@ -1,8 +1,9 @@
 <template>
   <div class="progress">
   <svg width="350" height="350" viewBox="0 0 200 200">  
+    <circle cx="100" cy="100" r="84" fill="none" stroke="#1A1919" stroke-width="12" class="outer-circle" />
     <circle cx="100" cy="100" r="74" fill="none" stroke="#666" stroke-width="12" class="outer-circle" />
-    <circle cx="100" cy="100" r="74" fill="none" stroke="#FC4D04" stroke-width="12" stroke-dasharray="465" :stroke-dashoffset="dashOffsetCircle" stroke-linecap="round" class="inner-circle"/>
+    <circle cx="100" cy="100" r="74" fill="none" stroke="#F3AD26" stroke-width="12" stroke-dasharray="465" :stroke-dashoffset="dashOffsetCircle" stroke-linecap="round" class="inner-circle"/>
   </svg>
   <div class="percentage">
     {{percentage}}%
@@ -45,30 +46,18 @@ $grey:desaturate($colour,90%);
   svg{
     transform: rotate(180deg);
     @media only screen and (max-width : 1460px){
-      width: 350px;
-      height: 350px;
+      width: 440px;
+      height: 440px;
     }
-    @media only screen and (max-width : 1160px){
+    @media only screen and (max-width : 580px){
+      width: 320px;
+      height: 320px;
+    }
+    @media only screen and (max-width : 380px){
       width: 300px;
       height: 300px;
     }
-    @media only screen and (max-width : 460px){
-      width: 160px;
-      height: 160px;
-    }
-    .outer-circle{
-      width: min-content;
-      stroke: #5B5947;        
-      outline: 12px solid #1A1919;
-      box-shadow: 0px 0px 5px #F3AD26;
-      -webkit-border-radius: 50% !important;
-      -moz-border-radius: 50% !important;
-      border-radius: 50% !important;
-      -khtml-border-radius: 50% !important;
-      box-shadow: 0 0 10px 10px #fabd44;
-    }
      .inner-circle{
-      stroke : #F3AD26;
       box-shadow: 0 0 10px 10px #fabd44;
       filter: drop-shadow(0px 0px 3px #F3AD26);
     }
@@ -90,11 +79,10 @@ $grey:desaturate($colour,90%);
       top: 33%;
       font-size: 69px;
     }
-    @media only screen and (max-width : 460px){
-      top: 16%;
-      font-size: 30px;
+    @media only screen and (max-width : 380px){
+      top: 30%;
+      font-size: 60px;
     }
-
   }
 }
 

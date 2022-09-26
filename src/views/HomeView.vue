@@ -315,7 +315,6 @@ export default {
     .range-wrapper{
       width: 447px;
       height: 93px;
-      margin-bottom: 15px;
       background: #5B5947;
       border-radius: 56px;
       display: flex;
@@ -324,13 +323,9 @@ export default {
       font-weight: 400;
       font-size: 40px;
       color: #FFFFFF;
-      @media only screen and (max-width:1460px){
-        width: 347px;
-        height: 63px;
-      }
-      @media only screen and (max-width:560px){
-        width: 230px;
-        height: 30px;
+      @media only screen and (max-width:580px){
+        width: 300px;
+        height: 65px;;
         font-size: 20px;
       }
       .btn{
@@ -346,15 +341,10 @@ export default {
         justify-content: center;
         color: #5B5947;
         cursor: pointer;
-        @media only screen and (max-width:1460px){
+        @media only screen and (max-width:580px){
           width: 63px;
           height: 63px;
           font-size: 50px;
-        }
-        @media only screen and (max-width:560px){
-          width: 30px;
-          height: 30px;
-          font-size: 30px;
         }
       }
       .valueInput{
@@ -370,7 +360,7 @@ export default {
           width: 80px;
           font-size: 30px;
         }
-        @media only screen and (max-width:560px){
+        @media only screen and (max-width:580px){
           padding:2px; 
           font-size: 20px;
         }
@@ -393,8 +383,9 @@ export default {
       box-shadow: 0px 0px 17px #F3AD26;
       border-radius: 81px;
       width: 447px;
-      height: 60px;
+      height: 80px;
       border: none;
+      margin: 28px auto;
 
       font-weight: 400;
       font-size: 36px;
@@ -405,13 +396,10 @@ export default {
       &:hover, &a:active{
         box-shadow: 0px 0px 5px #F3AD26;
       }
-      @media only screen and (max-width:1460px){
-        width: 347px;
-        height: 43px;
-        font-size: 20px;
-      }
-      @media only screen and (max-width:560px){
-        width: 230px;
+      @media only screen and (max-width:580px){
+        width: 300px;
+        height: 65px;
+        font-size: 28px;
       }
 
 
@@ -426,17 +414,13 @@ export default {
     }
     .currencies{
       color: #fff;
-      margin-top: 45px;
       font-weight: 400;
       font-size: 40px;
       display: flex;
       text-transform: uppercase;
-      @media only screen and (max-width:1460px){
-        margin-top: 30px;
-      }
       @media only screen and (max-width:580px){
         font-size: 28px;
-        width: 100%;
+        width: 320px;
       }
       .secondCurrency,
       .firstCurrency{
