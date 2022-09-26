@@ -30,6 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .nav{
+      height: 210px;
       outline: none;
       position: relative;
       padding: 70px 80px;
@@ -42,17 +43,13 @@ export default {
       } 
       @media only screen and (max-width:1560px){
         padding-left: 30px;
-        
       } 
-      @media only screen and (max-width:1560px){
-        padding: 30px;
+      @media only screen and (max-width:580px){
+        height: 110px;
       } 
       @media only screen and (max-width:380px){
         padding: 30px 15px;
       } 
-      @media only screen and (max-width:1120px){
-        height: min-content;
-      }
 
       .logo{
         display: flex;
