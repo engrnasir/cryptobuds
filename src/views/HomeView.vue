@@ -62,7 +62,7 @@ export default {
       return{
         showPopup:false,
 
-        value:1,
+        value:0,
         firstVal:400,
         totalVal:1400,
 

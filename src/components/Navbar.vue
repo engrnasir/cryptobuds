@@ -47,6 +47,9 @@ export default {
       @media only screen and (max-width:1560px){
         padding: 30px;
       } 
+      @media only screen and (max-width:380px){
+        padding: 30px 15px;
+      } 
       @media only screen and (max-width:1120px){
         height: min-content;
       }
@@ -67,7 +70,7 @@ export default {
             font-size: 24px;
           } 
           @media only screen and (max-width:580px){
-            font-size: 16px;
+            font-size: 14px;
           } 
           
           span{
@@ -100,7 +103,7 @@ export default {
               font-size: 20px;
             } 
             @media only screen and (max-width:580px){
-              font-size: 12px;
+              font-size: 16px;
               padding: 3px 10px;
             } 
             &:hover{
@@ -135,6 +138,10 @@ export default {
           width: 25px;
           height: 25px;
         }
+        @media only screen and (max-width:370px){
+          width: 20px;
+          height: 20px;
+        }
         img{
           width: 50px;
           height: 50px;
@@ -145,6 +152,10 @@ export default {
           @media only screen and (max-width:560px){
             width: 15px;
             height: 15px;
+          }
+          @media only screen and (max-width:370px){
+            width: 12px;
+            height: 12px;
           }
         }
       }
