@@ -14,14 +14,10 @@
                 <div class="sortingWrapper" :class="showSortingOptions? '':'hideOptions'">
                   <div class="sorting" @click="showSortingOptions=!showSortingOptions">no sorting</div>
                   <ul class="options">
-                    <li class="option">option1</li>
-                    <li class="option">option2</li>
-                    <li class="option">option3</li>
-                    <li class="option">option4</li>
+                    <li class="option" v-for="(option, index) in options" :key="index" @click="showSortingOptions=false">{{option}}</li>
                   </ul>
                 </div>
                 <div class="blur-box">
-                    <!-- <div v-for="i in 4" :key="i" class="box" :class="`box${i}`"></div> -->
                     <img src="@/assets/filterPixel.png" alt="">
                 </div>
             </div>
@@ -58,7 +54,8 @@ import NftCard from "@/components/NftCard.vue";
             {img:'nft7.png', number:54, ranked:4500},
             {img:'nft8.png', number:54, ranked:4500},
             {img:'nft9.png', number:54, ranked:4500},
-          ]
+          ],
+          options:['option1', 'option2', 'option3', 'option4']
         }
       }
   }

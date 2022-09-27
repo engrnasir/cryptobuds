@@ -20,15 +20,16 @@
   width: 100%;
   .content{
     width: 100%;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-right: 13px solid #0F0F0F;
+    border-right: 10px solid #0F0F0F;
     @media only screen and (max-width:1120px){
       min-height: 30vh;
-      border-right: 10px solid #0F0F0F;
+      border-right: 5px solid #0F0F0F;
+      padding: 50px 0;
     }
     .gallery,
     .the{

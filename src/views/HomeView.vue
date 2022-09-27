@@ -37,7 +37,7 @@
             <div class="h-line"></div>
           </div>
           <div class="range-wrapper">
-            <button class="btn dercrementBtn" @click="value>0?value--:value"><p>-</p></button>
+            <button class="btn dercrementBtn" @click="value>0?value--:value"><p class="minus">-</p></button>
             <input type="number" class="valueInput" v-model="value">
             <span>Max</span>
             <button class="btn incrementBtn" @click="value++"><p>+</p></button>
@@ -251,7 +251,7 @@ export default {
     justify-content: center;
     padding: 80px 40px;
     @media only screen and (max-width:560px){
-      padding: 50px 20px;
+      padding: 50px 5px;
     }
     .blur-box{
         position: absolute;
@@ -341,10 +341,17 @@ export default {
         justify-content: center;
         color: #5B5947;
         cursor: pointer;
+        
         @media only screen and (max-width:580px){
           width: 63px;
           height: 63px;
           font-size: 50px;
+        }
+      }
+      .minus{
+        margin-bottom: 12px;
+        @media only screen and (max-width:580px){
+          margin-bottom: 8px;
         }
       }
       .valueInput{

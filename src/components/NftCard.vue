@@ -38,10 +38,7 @@ export default {
         margin-bottom: 20px;
         transition: all .25s;
         &:hover{
-          transform: scale(1.03);
-          border-radius: 0 30px 0 30px;
           cursor: pointer;
-          border: 1px solid #F3AD26;
         }
         .thumbnail{
             position: relative;

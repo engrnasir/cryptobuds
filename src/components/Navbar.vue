@@ -38,6 +38,7 @@ export default {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      width: 100%;
       @media only screen and (max-width:1790px){
         padding: 50px;
       } 
@@ -47,7 +48,7 @@ export default {
       @media only screen and (max-width:580px){
         height: 110px;
       } 
-      @media only screen and (max-width:380px){
+      @media only screen and (max-width:420px){
         padding: 30px 15px;
       } 
 
@@ -76,6 +77,7 @@ export default {
         }
       } 
       .navOptions{
+        text-align: center;
         list-style: none;
         display: flex;
         align-items: center;
@@ -90,18 +92,22 @@ export default {
             font-weight: 400;
             font-size: 30px;
             padding: 10px 30px;
+            text-transform: uppercase;
             @media only screen and (max-width:1790px){
               font-size: 24px;
             }
             @media only screen and (max-width:1460px){
               padding: 10px 15px;
-            }
-            @media only screen and (max-width:1180px){
               font-size: 20px;
+            }
+
+            @media only screen and (max-width:640px){
+              font-size: 17px;
+              font-weight: 400;
+              padding: 3px 5px;
             } 
-            @media only screen and (max-width:580px){
-              font-size: 16px;
-              padding: 3px 10px;
+            @media only screen and (max-width:355px){
+              font-size: 15px;
             } 
             &:hover{
                 color: #F3AD26; 
@@ -110,6 +116,7 @@ export default {
         }
       }
       .connectedBtn{
+        
         position: relative;
         z-index: 2;
         width: 60px;
@@ -122,6 +129,9 @@ export default {
         filter: drop-shadow(0px 0px 17px #F3AD26);
         border: none;
         cursor: pointer; 
+        @media only screen and (max-width:1120px){
+          margin-left: 14%;
+        }
         @media only screen and (max-width:1790px){
           width: 60px;
           height: 60px;
@@ -134,6 +144,9 @@ export default {
         @media only screen and (max-width:560px){
           width: 25px;
           height: 25px;
+        }
+        @media only screen and (max-width:460px){
+          margin-left: 5%;
         }
         @media only screen and (max-width:370px){
           width: 20px;
