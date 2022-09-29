@@ -170,6 +170,7 @@ export default {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      border: none !important;
       .mint{
         font-weight: 500;
         font-size: 48px;
