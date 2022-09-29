@@ -39,7 +39,7 @@
           <div class="range-wrapper">
             <button class="btn dercrementBtn" @click="value>0?value--:value"><p class="minus">-</p></button>
             <input type="number" class="valueInput" v-model="value">
-            <span>Max</span>
+            <span class="maxBtn">Max</span>
             <button class="btn incrementBtn" @click="value++"><p>+</p></button>
           </div>
           <button class="mintBtn" @click="value>0?showPopup=true:''" :class="value==0? 'disableMint':''">mint</button>
@@ -342,7 +342,14 @@ export default {
         justify-content: center;
         color: #5B5947;
         cursor: pointer;
-        
+        transition: all .2s;
+        caret-color: transparent;
+        &:hover{
+          transform: scale(1.02);
+        }
+        &:active{
+          transform: scale(.9);
+        }
         @media only screen and (max-width:580px){
           width: 63px;
           height: 63px;
@@ -373,7 +380,20 @@ export default {
           font-size: 20px;
         }
       }
-      span{  
+      .maxBtn{ 
+        caret-color: transparent;
+        transition: all .2s;
+        cursor: pointer; 
+        &::selection{
+          background: transparent;
+        }
+        &:hover{
+          transform: scale(1.02);
+          font-weight: 600;
+        }
+        &:active{
+          transform: scale(.9);
+        }
         @media only screen and (max-width:560px){
           font-size: 20px;
         }
