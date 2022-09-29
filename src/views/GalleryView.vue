@@ -1,6 +1,7 @@
 <template>
     <div class="container">
       <div class="row wrapper">
+        <div class="overlay" v-if="showSortingOptions" @click="showSortingOptions=false"></div>
         <div class="left">
           <Navbar/>
           <div class="content">
@@ -12,7 +13,7 @@
             <div class="filterBar">
                 <input type="text" placeholder="SEARCH FOR #ID">
                 <div class="sortingWrapper" :class="showSortingOptions? '':'hideOptions'">
-                  <div class="sorting" @click="showSortingOptions=!showSortingOptions">no sorting</div>
+                  <div class="sorting" @click.stop="showSortingOptions=!showSortingOptions">no sorting</div>
                   <ul class="options">
                     <li class="option" v-for="(option, index) in options" :key="index" @click="showSortingOptions=false">{{option}}</li>
                   </ul>

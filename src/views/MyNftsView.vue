@@ -1,6 +1,7 @@
 <template>
     <div class="container">
       <div class="row wrapper">
+        <div class="overlay" v-if="showSortingOptions" @click="showSortingOptions=false"></div>
         <div class="left">
           <Navbar/>
           <div class="content">
