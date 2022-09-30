@@ -155,8 +155,7 @@ export default {
   .wrapper{
     width: 100%;
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-gap: 34px;
+    grid-template-columns: 40% 59%;
     justify-content: space-between;
     justify-items: flex-start;
 
@@ -287,9 +286,9 @@ export default {
           }
       }
       .values{
-        padding: 80px 40px;
+        padding: 50px 40px;
         @media only screen and (max-width:1460px){
-          padding: 60px 30px;
+          padding: 50px 30px;
         }
         @media only screen and (max-width:560px){
           padding: 30px 20px;
