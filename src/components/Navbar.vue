@@ -33,21 +33,21 @@ export default {
       height: 210px;
       outline: none;
       position: relative;
-      padding: 70px 80px;
       background-color: #0F0F0F;
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      @media only screen and (max-width:1790px){
-        padding: 50px;
-      } 
+      padding: 35px;
       @media only screen and (max-width:1560px){
-        padding-left: 30px;
+        padding: 20px;
       } 
       @media only screen and (max-width:580px){
         height: 110px;
-      } 
+      }   
+      @media only screen and (max-width:1160px){
+        padding: 50px;
+      }
       @media only screen and (max-width:420px){
         padding: 30px 15px;
       } 
@@ -61,11 +61,11 @@ export default {
           font-size: 30px;
           text-transform: uppercase;
           color: #fff;
-          @media only screen and (max-width:1560px){
+          @media only screen and (max-width:1790px){
             font-size: 28px;
           }
-          @media only screen and (max-width:1180px){
-            font-size: 24px;
+          @media only screen and (max-width:1340px){
+            font-size: 20px;
           } 
           @media only screen and (max-width:580px){
             font-size: 14px;
@@ -90,13 +90,10 @@ export default {
             text-decoration: none;
             color: #fff;
             font-weight: 400;
-            font-size: 30px;
             padding: 10px 30px;
             text-transform: uppercase;
+            font-size: 24px;
             @media only screen and (max-width:1790px){
-              font-size: 24px;
-            }
-            @media only screen and (max-width:1460px){
               padding: 10px 15px;
               font-size: 20px;
             }
@@ -133,13 +130,9 @@ export default {
           margin-left: 14%;
         }
         @media only screen and (max-width:1790px){
-          width: 60px;
-          height: 60px;
-          filter: drop-shadow(0px 0px 10px #F3AD26);
-        }
-        @media only screen and (max-width:1560px){
           width: 35px;
           height: 35px;
+          filter: drop-shadow(0px 0px 10px #F3AD26);
         }
         @media only screen and (max-width:560px){
           width: 25px;
@@ -153,11 +146,11 @@ export default {
           height: 20px;
         }
         img{
-          width: 50px;
-          height: 50px;
-          @media only screen and (max-width:1560px){
-            width: 25px;
-            height: 25px;
+          width: 40px;
+          height: 40px;
+          @media only screen and (max-width:1790px){
+            width: 20px;
+            height: 20px;
           }
           @media only screen and (max-width:560px){
             width: 15px;

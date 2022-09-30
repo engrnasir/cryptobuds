@@ -153,17 +153,20 @@ export default {
   }
 
   .wrapper{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 40% 60%;
     grid-gap: 34px;
     justify-content: space-between;
-    justify-items: center;
-    @media only screen and (max-width:1120px){
+    justify-items: flex-start;
+
+
+    @media only screen and (max-width:1160px){
       grid-template-columns: repeat(1,1fr);
     }
   }
   .left{
-    width: 100%;
+    min-width: 100%;
     .content{
       width: 100%;
       display: flex;
@@ -243,7 +246,7 @@ export default {
   }
   .right{
     position: relative;
-    width: 100%;
+    min-width: 100%;
     margin-top: 25px;
     background: #0F0F0F;
     display: flex;

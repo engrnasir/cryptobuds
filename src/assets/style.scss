@@ -16,11 +16,11 @@
 .wrapper{
   position: relative;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 40% 60%;
   grid-gap: 34px;
   justify-content: space-between;
   justify-items: center;
-  @media only screen and (max-width:1120px){
+  @media only screen and (max-width:1160px){
     grid-template-columns: repeat(1,1fr);
   }
 }
@@ -204,10 +204,12 @@
   .cards{
     padding-top: 40px;
     padding-bottom: 40px;
+    padding: 40px 20px;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
+    grid-gap: 15px;
     justify-content: space-between;
-    flex-wrap: wrap;
     @media only screen and (min-width:1120px){
       max-height: 90vh;
       overflow-y: scroll;

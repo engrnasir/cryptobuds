@@ -15,7 +15,6 @@ html{
 }
 .row{
   width: 100%;
-  // max-width: 1920px;
   margin-left: 50%;
   transform: translateX(-50%);
 }

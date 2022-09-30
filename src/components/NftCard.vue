@@ -37,6 +37,8 @@ export default {
         margin: 10px;
         margin-bottom: 20px;
         transition: all .25s;
+        width: 240px;
+        min-width: 240px;
         &:hover{
           cursor: pointer;
         }
