@@ -253,9 +253,9 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 40px;
+    padding: 40px;
     @media only screen and (max-width:560px){
-      padding: 50px 5px;
+      padding: 40px 5px;
     }
     .blur-box{
         position: absolute;
@@ -287,7 +287,7 @@ export default {
           }
       }
       .values{
-        padding: 100px 40px;
+        padding: 80px 40px;
         @media only screen and (max-width:1460px){
           padding: 60px 30px;
         }
