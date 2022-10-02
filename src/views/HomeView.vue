@@ -443,6 +443,7 @@ export default {
       }
     }
     .currencies{
+      width: 100%;
       color: #fff;
       font-weight: 400;
       font-size: 40px;
@@ -454,14 +455,15 @@ export default {
       }
       .secondCurrency,
       .firstCurrency{
-        width: 230px;
-        text-align: center;
-        padding: 10px 0;
+        width: 50%;
+        padding: 10px 15px;
+        text-align: left;
         @media only screen and (max-width:580px){
           width:50%;
         }
       }
       .firstCurrency{
+        text-align: right;
         border-right: 1px solid #F3AD26;
       }
     }
