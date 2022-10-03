@@ -228,6 +228,15 @@
     &::-webkit-scrollbar-thumb:hover{
         background: #303030;
     }
+    .no-nft{
+      font-weight: 500;
+      font-size: 60px;
+      letter-spacing: 0.14em;
+      color: #000000;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 30%;
+    }
   }
 
 }

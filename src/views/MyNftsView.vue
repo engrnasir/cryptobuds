@@ -24,6 +24,7 @@
             </div>
             <div class="cards">
               <NftCard v-for="(card,index) in cards" :key="index" :info="card" />
+              <h2 class="no-nft" v-if="cards.length<=0">You have no NFT in your wallet</h2>
             </div>
         </div>
       </div>
@@ -46,10 +47,10 @@ import NftCard from "@/components/NftCard.vue";
           val1:1,
           val2:0.1,
           cards:[
-            {img:'nft1.png', number:54, ranked:4500},
-            {img:'nft2.png', number:54, ranked:4500},
-            {img:'nft3.png', number:54, ranked:4500},
-            {img:'nft4.png', number:54, ranked:4500},
+            // {img:'nft1.png', number:54, ranked:4500},
+            // {img:'nft2.png', number:54, ranked:4500},
+            // {img:'nft3.png', number:54, ranked:4500},
+            // {img:'nft4.png', number:54, ranked:4500},
           ],
           options:['option1', 'option2', 'option3', 'option4']
         }
