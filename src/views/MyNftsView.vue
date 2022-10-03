@@ -14,7 +14,7 @@
                 <input type="text" placeholder="SEARCH FOR #ID">
                 <div class="sortingWrapper" :class="showSortingOptions? '':'hideOptions'">
                   <div class="sorting" @click="showSortingOptions=!showSortingOptions">no sorting</div>
-                  <ul class="options">
+                  <ul class="options" v-if="showSortingOptions">
                     <li class="option" v-for="(option, index) in options" :key="index" @click="showSortingOptions=false">{{option}}</li>
                   </ul>
                 </div>
@@ -52,7 +52,18 @@ import NftCard from "@/components/NftCard.vue";
             // {img:'nft3.png', number:54, ranked:4500},
             // {img:'nft4.png', number:54, ranked:4500},
           ],
-          options:['option1', 'option2', 'option3', 'option4']
+          options:[
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+            'option1', 'option2', 'option3', 'option4',
+        ]
         }
       }
   }
