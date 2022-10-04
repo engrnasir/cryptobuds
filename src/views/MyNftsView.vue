@@ -11,7 +11,15 @@
         </div>
         <div class="right">
             <div class="filterBar">
-                <input type="text" placeholder="SEARCH FOR #ID">
+              <label for="idInput" class="searchInput">
+                <input type="text" placeholder="SEARCH FOR #ID" id="idInput">
+                <button class="searchButton">
+                  <svg width="33" height="25" viewBox="0 0 33 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="9.5" stroke="#b9b592" stroke-width="3"/>
+                  <line x1="21.0125" y1="18.3292" x2="27.3293" y2="21.4876" stroke="#b9b592" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                </button>
+              </label>
                 <div class="sortingWrapper" :class="showSortingOptions? '':'hideOptions'">
                   <div class="sorting">
                     <div class="minusBtn"><span>-</span></div>
@@ -75,4 +83,5 @@ import NftCard from "@/components/NftCard.vue";
   
   <style lang="scss" scoped>
     @import '@/assets/style.scss';
+
   </style>
