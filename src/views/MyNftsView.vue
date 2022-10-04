@@ -13,7 +13,11 @@
             <div class="filterBar">
                 <input type="text" placeholder="SEARCH FOR #ID">
                 <div class="sortingWrapper" :class="showSortingOptions? '':'hideOptions'">
-                  <div class="sorting" @click="showSortingOptions=!showSortingOptions">no sorting</div>
+                  <div class="sorting">
+                    <div class="minusBtn"><span>-</span></div>
+                    <span @click="showSortingOptions=!showSortingOptions"> no sorting</span>
+                    <div class="addBtn"><span>+</span></div>
+                  </div>
                   <ul class="options" v-if="showSortingOptions">
                     <li class="option" v-for="(option, index) in options" :key="index" @click="showSortingOptions=false">{{option}}</li>
                   </ul>
