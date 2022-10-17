@@ -12,6 +12,16 @@
       min-height: 100%;
       z-index: 998;
     }
+    .goTop{
+      font-size: 16px;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }   
 }
 .wrapper{
   position: relative;
@@ -75,7 +85,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;       
+  justify-content: flex-start;    
   .filterBar{
     // position: relative;
     width: 100%;
@@ -276,12 +286,15 @@
   }
   }
   .cards{
+    position: relative;
     padding: 40px 10px !important;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
     grid-gap: 15px;
     justify-content: space-between;
+    scroll-behavior: smooth;
+    
     @media only screen and (min-width:1120px){
       max-height: 90vh;
       overflow-y: scroll;

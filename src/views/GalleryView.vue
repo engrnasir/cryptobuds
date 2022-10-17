@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+      <button class="goTop" v-if="showScroll" @click="goTop">Go Top</button>
       <div class="row wrapper">
         <div class="overlay" v-if="showSortingOptions" @click="showSortingOptions=false"></div>
         <div class="left">
@@ -30,9 +31,10 @@
                     <img src="@/assets/filterPixel.png" alt="">
                 </div>
             </div>
-            <div class="cards">
+            <div class="cards" id="nft-gallery-cards">
                 <NftCard v-for="(card,index) in cards" :key="index" :info="card" />
-            </div>
+              </div>
+              
         </div>
       </div>
     </div>
@@ -45,6 +47,7 @@ import NftCard from "@/components/NftCard.vue";
       components: { Navbar, NftCard },
       data(){
         return{
+          showScroll : false,
           showSortingOptions:false,
           value:1,
           firstVal:400,
@@ -66,7 +69,20 @@ import NftCard from "@/components/NftCard.vue";
           ],
           options:['option1', 'option2', 'option3', 'option4']
         }
-      }
+      },
+      methods:{
+        goTop(){
+          document.getElementById('nft-gallery-cards').scrollTo(0, 0);
+        },
+        setShowScroll(){
+          var doc = document.getElementById('nft-gallery-cards');
+          var top = (doc.scrollTop) - (doc.clientTop || 0);
+          this.showScroll = top>0;
+        }
+    },
+    mounted () {
+      document.getElementById('nft-gallery-cards').addEventListener('scroll', this.setShowScroll);
+    },
   }
   </script>
   
